@@ -21,9 +21,11 @@ android {
 
 dependencies {
     implementation project(':sdk')
+    implementation project(':sdk-core-ktx')
+    implementation project(':sdk-livedata-ktx')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
 }

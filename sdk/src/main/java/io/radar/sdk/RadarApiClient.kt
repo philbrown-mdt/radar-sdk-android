@@ -50,7 +50,11 @@ internal class RadarApiClient(
     }
 
     interface RadarContextApiCallback {
-        fun onComplete(status: RadarStatus, res: JSONObject? = null, context: RadarContext? = null)
+        fun onComplete(
+            status: RadarStatus,
+            res: JSONObject? = null,
+            context: RadarContext? = null
+        )
     }
 
     interface RadarSearchPlacesApiCallback {
@@ -95,7 +99,11 @@ internal class RadarApiClient(
     }
 
     interface RadarDistanceApiCallback {
-        fun onComplete(status: RadarStatus, res: JSONObject? = null, routes: RadarRoutes? = null)
+        fun onComplete(
+            status: RadarStatus,
+            res: JSONObject? = null,
+            routes: RadarRoutes? = null
+        )
     }
 
     interface RadarMatrixApiCallback {

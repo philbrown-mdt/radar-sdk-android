@@ -893,6 +893,7 @@ object Radar {
         callback: RadarTrackCallback?
     ) {
         if (!initialized) {
+            callback?.onComplete(RadarStatus.ERROR_PUBLISHABLE_KEY)
             return
         }
 
@@ -1113,6 +1114,7 @@ object Radar {
     @JvmStatic
     fun startTrip(options: RadarTripOptions, callback: RadarTripCallback? = null) {
         if (!initialized) {
+            callback?.onComplete(RadarStatus.ERROR_PUBLISHABLE_KEY)
             return
         }
 
@@ -1174,6 +1176,7 @@ object Radar {
     @JvmStatic
     fun updateTrip(options: RadarTripOptions, status: RadarTrip.RadarTripStatus?, callback: RadarTripCallback? = null) {
         if (!initialized) {
+            callback?.onComplete(RadarStatus.ERROR_PUBLISHABLE_KEY)
             return
         }
 
@@ -1232,6 +1235,7 @@ object Radar {
     @JvmStatic
     fun completeTrip(callback: RadarTripCallback? = null) {
         if (!initialized) {
+            callback?.onComplete(RadarStatus.ERROR_PUBLISHABLE_KEY)
             return
         }
 
@@ -1288,6 +1292,7 @@ object Radar {
     @JvmStatic
     fun cancelTrip(callback: RadarTripCallback? = null) {
         if (!initialized) {
+            callback?.onComplete(RadarStatus.ERROR_PUBLISHABLE_KEY)
             return
         }
 
