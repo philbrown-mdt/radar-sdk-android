@@ -23,9 +23,9 @@ import kotlin.coroutines.suspendCoroutine
  * Created when a location request succeeds, fails, or times out. Receives the request status and, if successful,
  * the location.
  *
- * @param[status] RadarStatus The request status.
- * @param[location] Location? If successful, the location.
- * @param[stopped] Boolean A boolean indicating whether the device is stopped.
+ * @param[status] The request status.
+ * @param[location] If successful, the location.
+ * @param[stopped] Indicates whether the device is stopped.
  */
 data class RadarLocationResponse(
     val status: Radar.RadarStatus,
@@ -37,10 +37,10 @@ data class RadarLocationResponse(
  * Created when a track request succeeds, fails, or times out. Receives the request status and, if successful,
  * the user's location, an array of the events generated, and the user.
  *
- * @param[status] RadarStatus The request status.
- * @param[location] Location? If successful, the user's location.
- * @param[events] Array<RadarEvent>? If successful, an array of the events generated.
- * @param[user] RadarUser? If successful, the user.
+ * @param[status] The request status.
+ * @param[location] If successful, the user's location.
+ * @param[events] If successful, a list of the events generated.
+ * @param[user] If successful, the user.
  */
 data class RadarTrackResponse(
     val status: Radar.RadarStatus,
@@ -53,9 +53,9 @@ data class RadarTrackResponse(
  * Created when a trip update succeeds, fails, or times out. Receives the request status and, if successful, the
  * trip and an array of the events generated.
  *
- * @param[status] RadarStatus The request status.
- * @param[trip] RadarTrip? If successful, the trip.
- * @param[events] Array<RadarEvent>? If successful, an array of the events generated.
+ * @param[status] The request status.
+ * @param[trip] If successful, the trip.
+ * @param[events] If successful, a list of the events generated.
  */
 data class RadarTripResponse(
     val status: Radar.RadarStatus,
@@ -67,9 +67,9 @@ data class RadarTripResponse(
  * Created when a place search request succeeds, fails, or times out. Receives the request status and, if
  * successful, the location and an array of places sorted by distance.
  *
- * @param[status] RadarStatus The request status.
- * @param[location] Location? If successful, the location.
- * @param[places] Array<RadarPlace>? If successful, an array of places sorted by distance.
+ * @param[status] The request status.
+ * @param[location] If successful, the location.
+ * @param[places] If successful, a list of places sorted by distance.
  */
 data class RadarSearchPlacesResponse(
     val status: Radar.RadarStatus,
@@ -81,9 +81,9 @@ data class RadarSearchPlacesResponse(
  * Created when a geofence search request succeeds, fails, or times out. Receives the request status and, if
  * successful, the location and an array of geofences sorted by distance.
  *
- * @param[status] RadarStatus The request status.
- * @param[location] Location? If successful, the location.
- * @param[geofences] Array<RadarGeofence>? If successful, an array of geofences sorted by distance.
+ * @param[status] The request status.
+ * @param[location] If successful, the location.
+ * @param[geofences] If successful, a list of geofences sorted by distance.
  */
 data class RadarSearchGeofenceResponse(
     val status: Radar.RadarStatus,
@@ -95,8 +95,8 @@ data class RadarSearchGeofenceResponse(
  * Created when a geocoding request succeeds, fails, or times out. Receives the request status and, if
  * successful, the geocoding results (an array of addresses).
  *
- * @param[status] RadarStatus The request status.
- * @param[addresses] Array<RadarAddress>? If successful, the geocoding results (an array of addresses).
+ * @param[status] The request status.
+ * @param[addresses] If successful, the geocoding results (a list of addresses).
  */
 data class RadarGeocodeResponse(
     val status: Radar.RadarStatus,
@@ -108,9 +108,9 @@ data class RadarGeocodeResponse(
  * successful, the geocoding result (a partial address) and a boolean indicating whether the IP address is a
  * known proxy.
  *
- * @param[status] RadarStatus The request status.
- * @param[address] RadarAddress? If successful, the geocoding result (a partial address).
- * @param[proxy] Boolean A boolean indicating whether the IP address is a known proxy.
+ * @param[status] The request status.
+ * @param[address] If successful, the geocoding result (a partial address).
+ * @param[proxy] Indicates whether the IP address is a known proxy.
  */
 data class RadarIpGeocodeResponse(
     val status: Radar.RadarStatus,
@@ -122,8 +122,8 @@ data class RadarIpGeocodeResponse(
  * Created when a distance request succeeds, fails, or times out. Receives the request status and, if successful,
  * the routes.
  *
- * @param[status] RadarStatus The request status.
- * @param[routes] RadarRoutes? If successful, the routes.
+ * @param[status] The request status.
+ * @param[routes] If successful, the routes.
  */
 data class RadarRouteResponse(
     val status: Radar.RadarStatus,
@@ -134,8 +134,8 @@ data class RadarRouteResponse(
  * Created when a matrix request succeeds, fails, or times out. Receives the request status and, if successful,
  * the matrix.
  *
- * @param[status] RadarStatus The request status.
- * @param[matrix] RadarRoutesMatrix? If successful, the matrix.
+ * @param[status] The request status.
+ * @param[matrix] If successful, the matrix.
  */
 data class RadarMatrixResponse(
     val status: Radar.RadarStatus,
@@ -146,9 +146,9 @@ data class RadarMatrixResponse(
  * Created when a context request succeeds, fails, or times out. Receives the request status and, if successful,
  * the location and the context.
  *
- * @param[status] RadarStatus The request status.
- * @param[location] Location? If successful, the location.
- * @param[context] RadarContext? If successful, the context.
+ * @param[status] The request status.
+ * @param[location] If successful, the location.
+ * @param[context] If successful, the context.
  */
 data class RadarContextResponse(
     val status: Radar.RadarStatus,
